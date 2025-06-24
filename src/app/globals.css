@@ -27,11 +27,61 @@
 }
 
 @layer base {
-  body {
-    @apply bg-chocolate-100 text-chocolate-900;
+
+  button {
+    @apply bg-chocolate-950 text-chocolate-100;
+    @apply px-4 py-2 rounded-full font-bold transition-all duration-100;
+    font-family: var(--font-chewy);
   }
 
-    h1, h2, h3, h4, h5, h6 {
-        @apply font-chewy;
-    }
+  input {
+    @apply text-chocolate-950 outline-2 placeholder:text-chocolate-950 placeholder:opacity-75 rounded-full;
+    font-family: var(--font-chewy);
+  }
+
+  input:focus {
+    @apply border-chocolate-500 outline-2 transition-all duration-100;
+  }
+
+  input:hover {
+    @apply border-chocolate-400 outline-3 transition-all duration-100;
+  }
+
+  body {
+    @apply bg-chocolate-100 text-chocolate-950;
+  }
+
+  h1 {
+    @apply text-4xl font-bold;
+    font-family: var(--font-chewy);
+  }
+
+  h2 {
+    @apply text-3xl font-bold;
+    font-family: var(--font-chewy);
+  }
+
+  h3 {
+    @apply text-2xl font-bold;
+    font-family: var(--font-chewy);
+  }
+
+  h4 {
+    @apply text-xl font-bold;
+    font-family: var(--font-chewy); 
+  }
+
+  h5 {
+    @apply text-lg font-bold;
+    font-family: var(--font-chewy);
+  }
+
+  h6 {
+    @apply text-base font-bold;
+    font-family: var(--font-chewy); 
+  }
+
+  p {
+    @apply text-chocolate-900;
+  }
 }

@@ -4,18 +4,18 @@ import Form from 'next/form';
 
 export default function OrderPage() {
     return (
-        <div className="flex flex-col items-center justify-center w-full h-screen">
+        <div className="flex flex-col items-center justify-center">
             <Form action={() => console.log("TEST")} className="flex flex-col max-w-5xl gap-4 p-4">
-                <h1 className="text-2xl font-bold mb-4">Place Your Order</h1>
-                <p className="text-lg mb-4">Fill out the form below to place your order.</p>
+                <h1 className="">Place Your Order</h1>
+                <p className="">Fill out the form below to place your order.</p>
                 <input
                     type="number"
                     min="1"
                     placeholder="Quantity"
-                    className="p-2 border rounded mb-4"
+                    className="p-2"
                 />
                 {/* Add form fields here */}
-                <select className="p-2 border rounded mb-4" defaultValue="">
+                <select className="p-2 outline-2 rounded-full font-chewy text-chocolate-950" defaultValue="">
                     <option value="" disabled>
                         Select Product
                     </option>
@@ -23,10 +23,10 @@ export default function OrderPage() {
                     <option value="strawberry">Strawberry Delight</option>
                     <option value="mix">Mixed Box</option>
                 </select>
-                <input type="text" placeholder="Your Name" className="p-2 border rounded mb-4" />
-                <input type="email" placeholder="Your Email" className="p-2 border rounded mb-4" />
-                <textarea placeholder="Your Order Details" className="p-2 border rounded mb-4" rows="4"></textarea>
-                <button type="submit" className="p-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                <input type="text" placeholder="Your Name" className="p-2 rounded-full font-chewy text-chocolate-950" />
+                <input type="email" placeholder="Your Email" className="p-2 rounded-full font-chewy text-chocolate-950" />
+                <textarea placeholder="Your Order Details" className="p-2 rounded-2xl font-chewy text-chocolate-950 outline-2 resize-none h-64"></textarea>
+                <button>
                     Submit Order
                 </button>
             </Form>

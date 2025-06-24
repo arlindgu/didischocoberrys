@@ -10,19 +10,35 @@ export type products = {
 export const products: products[] = [
     {
         id: "1",
-        name: "Chocolate Berry",
-        description: "A delightful mix of rich chocolate and fresh berries.",
-        price: 5.99,
+        name: "Strawberry Box",
+        description: "Straberry Box with 15 pieces",
+        price: 45.00,
         image: "/images/chocolate-berry.jpg",
-        category: "chocolate"
+        category: "Box"
     },
-    {
+        {
         id: "2",
-        name: "Strawberry Delight",
-        description: "Fresh strawberries dipped in creamy chocolate.",
-        price: 4.99,
-        image: "/images/strawberry-delight.jpg",
-        category: "strawberry"
+        name: "Strawberry Box",
+        description: "Straberry Box with 35 pieces",
+        price: 45.00,
+        image: "/images/chocolate-berry.jpg",
+        category: "Box"
+    },
+            {
+        id: "2",
+        name: "I ❤️ Box",
+        description: "I ❤️ Box with",
+        price: 45.00,
+        image: "/images/chocolate-berry.jpg",
+        category: "Box"
+    },
+               {
+        id: "2",
+        name: "I ❤️ Box",
+        description: "I ❤️ Box with",
+        price: 45.00,
+        image: "/images/chocolate-berry.jpg",
+        category: "Box"
     },
 ]
 
