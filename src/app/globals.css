@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+  --background: oklch(100% 0 none);
+  --foreground: oklch(0% 0 none);
+}
+
+@theme {
+  --color-chocolate: oklch(39.607% 0.06421 39.165);
+  --color-chocolate-50: oklch(100% 0 none);
+  --color-chocolate-100: oklch(97.045% 0.00601 43.335);
+  --color-chocolate-200: oklch(90.432% 0.02157 39.375);
+  --color-chocolate-300: oklch(83.907% 0.03591 39.967);
+  --color-chocolate-400: oklch(77.242% 0.05292 37.89);
+  --color-chocolate-500: oklch(70.637% 0.06968 39.559);
+  --color-chocolate-600: oklch(64.194% 0.08808 39.459);
+  --color-chocolate-700: oklch(57.56% 0.10026 39.14);
+  --color-chocolate-800: oklch(50.708% 0.08624 39.149);
+  --color-chocolate-900: oklch(43.266% 0.07178 39.158);
+  --color-chocolate-950: oklch(39.607% 0.06421 39.165);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-chewy: 'Chewy', cursive;
+}
+
+@layer base {
+  body {
+    @apply bg-chocolate-100 text-chocolate-900;
+  }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-chewy;
+    }
+}
