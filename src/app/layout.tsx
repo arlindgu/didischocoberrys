@@ -2,6 +2,19 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Instrument_Serif, Instrument_Sans } from "next/font/google";
+
+const instrumentSerif = Instrument_Serif({
+  weight: ["400"],
+  variable: "--font-instrument-serif",
+});
+
+const instrumentSans = Instrument_Sans({
+  weight: ["400"],
+  variable: "--font-instrument-sans",
+});
+
+
 
 export const metadata: Metadata = {
   title: "didischocoberrys",

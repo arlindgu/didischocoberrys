@@ -23,8 +23,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-serif: 'Instrument Serif', cursive;
-  --font-sans: 'Instrument Sans', sans-serif;
+  --font-serif: var(--instrument-serif);
+  --font-sans: var(--instrument-sans);
 }
 
 @layer base {
