@@ -1,67 +1,94 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function PricingPage() {
 
-
-
+    const Products = [
+        {
+            name: 'Erdbeerboxen',
+            description: 'Unsere handveredelten Premium-Erdbeeren sind ein echter Blickfang – perfekt für besondere Anlässe wie Geburtstage, Jubiläen oder als edles Geschenk. Frische Erdbeeren werden mit feinster weisser Schokolade überzogen und kunstvoll mit goldenen Zuckerrosen und Ziermustern dekoriert. Die hochwertige Geschenkverpackung mit Sichtfenster rundet das exklusive Erlebnis ab.',
+            picture: '/products/erdbeer_box.jpg',
+            options: [
+                { size: '15 Stück', price: 'CHF 45.00' },
+                { size: '35 Stück', price: 'CHF 80.00' },
+            ],
+        },
+        {
+            name: 'I ♥ Boxen',
+            description: 'Diese luxuriöse Herzbox ist gefüllt mit frisch getauchten Erdbeeren in zarter Vollmilch- und rosa Schokolade, liebevoll dekoriert mit essbarem Glitzer, feinen Verzierungen und frischen Himbeeren. Die funkelnde Herzverpackung mit Sichtfenster sorgt für den Wow-Effekt – ideal für romantische Anlässe wie Valentinstag, Jahrestage oder einfach als süsse Überraschung.',
+            picture: '/products/iloveu_box.jpg',
+            options: [
+                { size: 'Box', price: 'CHF 50.00' },
+                { size: '+ Rosen', price: '+ CHF 10.00' },
+            ],
+        },
+        {
+            name: 'Berry-Bag',
+            description: 'Ein eleganter Rundkorb voller tiefromantischer, frischer roter Rosen, kombiniert mit zartem Schleierkraut und veredelt mit handgemachten Schoko-Dekoren in Herz- und Kugelform. Die Farbtöne in Rot und Rosa schaffen ein luxuriöses Gesamtbild – ideal für besondere Momente wie Valentinstag, Geburtstage oder als liebevolle Überraschung.',
+            picture: '/products/berry_bag.jpg',
+            options: [
+                { size: 'Bag', price: 'CHF 70.00' },
+            ],
+        },
+    ];
 
     return (
-        <div className="flex flex-col max-w-5xl gap-4">
+        <div className="flex flex-col max-w-5xl gap-8">
             <motion.div
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: 'easeInOut' }}
                 className="flex flex-col items-center justify-center"
             >
-                <h1>Pricing</h1>
-                <p>Check out our pricing plans below</p>
+                <h1>Produkte und Preise</h1>
+                <p>Hier findest du die Preise für unsere liebevoll verpackten Erdbeer-Geschenke</p>
             </motion.div>
-            <motion.div
-                animate={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -50 }}
-                transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.05 }}
-                className="flex flex-col">
-                <h2 className="text-2xl font-bold">Erdbeerboxen</h2>
-                <div className="flex flex-row justify-between gap-4">
-                    <p>15 Stück</p>
-                    <p>CHF 45.00</p>
-                </div>
-                <div className="flex flex-row justify-between gap-4">
-                    <p>35 Stück</p>
-                    <p>CHF 80.00</p>
-                </div>
-            </motion.div>
+            <div>
 
-            <motion.div
-            animate={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: -50 }}
-            transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.1 }}>
-                <h2 className="text-2xl font-bold">I ♥ Boxen</h2>
-                <div className="flex flex-row justify-between gap-8">
-                    <p>Box</p>
-                    <p>CHF 50.00</p>
-                </div>
-                <div className="flex flex-row justify-between gap-8">
-                    <p>+ Rosen</p>
-                    <p>CHF 10.00</p>
-                </div>
-
-
-            </motion.div>
-
-
-            <motion.div
-            animate={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: -50 }}
-            transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.15 }}>
-                <h2 className="text-2xl font-bold">Berry-Bag</h2>
-                <div className="flex flex-row justify-between gap-8">
-                    <p>Bag</p>
-                    <p>CHF 70.00</p>
-                </div>
-            </motion.div>
+            {Products.map((product, idx) => (
+                <motion.div
+                    key={product.name}
+                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: -50 }}
+                    transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.05 + idx * 0.05 }}
+                    className="flex flex-col p-8 md:flex-row gap-8 border-2 rounded-xl mb-4 bg-gradient-to-br from-chocolate-100 to-chocolate-200"
+                >
+                    <div className="w-full md:max-w-3/5">
+                        <h2>{product.name}</h2>
+                        <p>{product.description}</p>
+                    </div>
+                    <div className="w-full">
+                        <h3>Preise</h3>
+                        <table className="w-full">
+                            <thead className="border-b-2">
+                                <tr>
+                                    <th className="text-left"></th>
+                                    <th className="text-right">Preis</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {product.options.map((option, optionIdx) => (
+                                    <tr key={optionIdx}>
+                                        <td className="text-left">{option.size}</td>
+                                        <td className="text-right">{option.price}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className='flex justify-center items-center aspect-square h-full w-full'>
+                        <Image
+                            src={product.picture}
+                            alt={product.name}
+                            width={300}
+                            height={300}
+                        />
+                    </div>
+                </motion.div>
+            ))}
+            </div>
         </div>
     )
 }

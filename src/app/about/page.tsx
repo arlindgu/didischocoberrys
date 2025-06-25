@@ -1,26 +1,47 @@
+"use client";
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function AboutPage() {
-    return (
-<div className="flex flex-col items-start justify-center">
-  <h1 className="text-4xl text-chocolate-950 mb-4">About Us</h1>
-  <p className="text-chocolate-900 max-w-2xl mb-2">
-    What started as a small kitchen hobby quickly turned into a true passion. One day, Didi dipped a few strawberries in smooth chocolate for a friends birthday – decorated with care and a sprinkle of creativity. The response was overwhelming.
-  </p>
-  <p className="text-chocolate-900 max-w-2xl mb-2">
-    Since then, she’s been creating homemade chocolate-covered strawberries for special moments like birthdays, Valentines Day, or just because. Each berry is handcrafted with love and attention to detail – fresh, homemade, and from the heart.
-  </p>
-  <p className="text-chocolate-900 max-w-2xl">
-    At Didis ChocoBerrys, it’s not just about chocolate and fruit – it’s about joy, flavor, and sharing little moments of happiness.
-  </p>
-  <br />
-  <Image
-    src="/signature.png"
-    alt="Chocolate and Strawberries"
-    width={200}
-    height={200}
-    className="mt-8"
-    />
-</div>
-    );
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: 'easeInOut' }}
+      className="flex flex-col items-start justify-center">
+      <h1 className="text-4xl text-chocolate-950 mb-4">Über uns</h1>
+      <motion.p
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.1 }}
+        className="text-chocolate-900 max-w-2xl mb-2">
+        Was als kleines Küchenhobby begann, wurde schnell zu einer echten Leidenschaft. Eines Tages tauchte Didi ein paar Erdbeeren in zartschmelzende Schokolade – liebevoll dekoriert und mit einer Prise Kreativität – für den Geburtstag einer Freundin. Die Resonanz war überwältigend.
+      </motion.p>
+      <motion.p
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.2 }}
+        className="text-chocolate-900 max-w-2xl mb-2">
+        Seitdem kreiert sie hausgemachte, schokoladenüberzogene Erdbeeren für besondere Momente wie Geburtstage, Valentinstag oder einfach so. Jede Beere wird mit Liebe und viel Sorgfalt handgefertigt – frisch, hausgemacht und von Herzen.
+      </motion.p>
+      <motion.p
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.3 }}
+        className="text-chocolate-900 max-w-2xl">
+        Bei Didis ChocoBerrys geht es nicht nur um Schokolade und Früchte – es geht um Freude, Geschmack und das Teilen kleiner Glücksmomente.
+      </motion.p>
+      <br />
+      <motion.img
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.6 }}
+        src="/signature.png"
+        alt="Schokolade und Erdbeeren"
+        width={200}
+        height={200}
+        className="mt-8"
+      />
+    </motion.div>
+  );
 }

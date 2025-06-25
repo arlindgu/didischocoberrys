@@ -11,7 +11,7 @@ export default function Navbar() {
     }
 
     return (
-        <header className="w-full p-8">
+        <header className="w-full p-8 border-b-2 shadow-sm top-0 bg-chocolate-200">
             <nav className="grid grid-cols-1 grid-rows-2">
                 <Link href="/" className='flex items-center justify-center text-5xl font-serif text-chocolate-950 italic font-bold'>
                     didischocoberrys
