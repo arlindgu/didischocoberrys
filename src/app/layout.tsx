@@ -5,11 +5,13 @@ import Footer from "@/components/Footer";
 import { Instrument_Serif, Instrument_Sans } from "next/font/google";
 
 const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
   weight: ["400"],
   variable: "--font-instrument-serif",
 });
 
 const instrumentSans = Instrument_Sans({
+  subsets: ["latin"],
   weight: ["400"],
   variable: "--font-instrument-sans",
 });
