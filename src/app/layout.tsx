@@ -2,11 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Chewy } from "next/font/google";
-
-const chewy = Chewy({
-  weight: "400",
-})
+import { Walter_Turncoat } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "didischocoberrys",
@@ -20,12 +16,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <Navbar />
-        <div className="flex flex-col justify-center items-center">
+      <body className="">
+
+        <main className="h-screen flex flex-col justify-between items-center">
+                  <Navbar />
+                  <div className="p-8 flex flex-col">
           {children}
-        </div>
-        <Footer />
+          </div>
+                  <Footer />
+        </main>
+
       </body>
     </html>
   );

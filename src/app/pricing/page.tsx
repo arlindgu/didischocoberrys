@@ -38,7 +38,7 @@ export default function PricingPage() {
             animate={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: -50 }}
             transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.1 }}>
-                <h2 className="text-2xl font-bold">I ❤️ Boxen</h2>
+                <h2 className="text-2xl font-bold">I ♥ Boxen</h2>
                 <div className="flex flex-row justify-between gap-8">
                     <p>Box</p>
                     <p>CHF 50.00</p>

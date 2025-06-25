@@ -23,7 +23,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-chewy: 'Chewy', cursive;
+  --font-serif: 'Instrument Serif', cursive;
+  --font-sans: 'Instrument Sans', sans-serif;
 }
 
 @layer base {
@@ -31,12 +32,12 @@
   button {
     @apply bg-chocolate-950 text-chocolate-100;
     @apply px-4 py-2 rounded-full font-bold transition-all duration-100;
-    font-family: var(--font-chewy);
+    font-family: var(--font-serif);
   }
 
   input {
     @apply text-chocolate-950 outline-2 placeholder:text-chocolate-950 placeholder:opacity-75 rounded-full;
-    font-family: var(--font-chewy);
+    font-family: var(--font-serif);
   }
 
   input:focus {
@@ -53,35 +54,36 @@
 
   h1 {
     @apply text-4xl font-bold;
-    font-family: var(--font-chewy);
+    font-family: var(--font-serif);
   }
 
   h2 {
     @apply text-3xl font-bold;
-    font-family: var(--font-chewy);
+    font-family: var(--font-serif);
   }
 
   h3 {
     @apply text-2xl font-bold;
-    font-family: var(--font-chewy);
+    font-family: var(--font-serif);
   }
 
   h4 {
     @apply text-xl font-bold;
-    font-family: var(--font-chewy); 
+    font-family: var(--font-serif); 
   }
 
   h5 {
     @apply text-lg font-bold;
-    font-family: var(--font-chewy);
+    font-family: var(--font-serif);
   }
 
   h6 {
     @apply text-base font-bold;
-    font-family: var(--font-chewy); 
+    font-family: var(--font-serif); 
   }
 
   p {
     @apply text-chocolate-900;
+    font-family: var(--font-sans)
   }
 }
