@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Walter_Turncoat } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "didischocoberrys",
