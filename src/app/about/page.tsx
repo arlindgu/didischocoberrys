@@ -8,7 +8,7 @@ export default function AboutPage() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: 'easeInOut' }}
       className="flex flex-col items-start justify-center">
-      <h1 className="text-4xl text-chocolate-950 mb-4">Über uns</h1>
+      <h1 className="text-4xl text-chocolate-950 mb-4 text-center w-full">Über uns</h1>
       <motion.p
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ export default function AboutPage() {
         alt="Schokolade und Erdbeeren"
         width={200}
         height={200}
-        className="mt-8"
+        className="mx-auto mt-4"
       />
     </motion.div>
   );

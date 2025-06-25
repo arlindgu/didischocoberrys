@@ -28,14 +28,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${instrumentSerif.variable} ${instrumentSans.variable}`}>
-
+      <body className={`${instrumentSerif.variable} ${instrumentSans.variable} subpixel-antialiased`}>
         <main className="h-screen flex flex-col justify-between items-center">
-                  <Navbar />
-                  <div className="p-8 flex flex-col">
-          {children}
+          <Navbar />
+          <div className="p-4 flex flex-col mt-8">
+            {children}
           </div>
-                  <Footer />
+          <Footer />
         </main>
 
       </body>

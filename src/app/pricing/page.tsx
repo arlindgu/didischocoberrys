@@ -35,7 +35,7 @@ export default function PricingPage() {
     ];
 
     return (
-        <div className="flex flex-col max-w-5xl gap-8">
+        <div className="flex flex-col max-w-5xl gap-8 mt-8">
             <motion.div
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ export default function PricingPage() {
                 className="flex flex-col items-center justify-center"
             >
                 <h1>Produkte und Preise</h1>
-                <p>Hier findest du die Preise für unsere liebevoll verpackten Erdbeer-Geschenke</p>
+                <p className='text-center'>Hier findest du die Preise für unsere liebevoll verpackten Erdbeer-Geschenke</p>
             </motion.div>
             <div>
 
@@ -53,13 +53,13 @@ export default function PricingPage() {
                     animate={{ opacity: 1, y: 0 }}
                     initial={{ opacity: 0, y: -50 }}
                     transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.05 + idx * 0.05 }}
-                    className="flex flex-col p-8 md:flex-row gap-8 border-2 rounded-xl mb-4 bg-gradient-to-br from-chocolate-100 to-chocolate-200"
+                    className="flex flex-col p-8 md:flex-row gap-8 border-2 rounded-xl mb-4 bg-chocolate-50"
                 >
                     <div className="w-full md:max-w-3/5">
                         <h2>{product.name}</h2>
-                        <p>{product.description}</p>
+                        <p className=''>{product.description}</p>
                     </div>
-                    <div className="w-full">
+                    <div className="w-full md:max-w-1/5">
                         <h3>Preise</h3>
                         <table className="w-full">
                             <thead className="border-b-2">
@@ -78,12 +78,13 @@ export default function PricingPage() {
                             </tbody>
                         </table>
                     </div>
-                    <div className='flex justify-center items-center aspect-square h-full w-full'>
+                    <div className="flex justify-center items-center aspect-square w-full md:w-2/3">
                         <Image
                             src={product.picture}
                             alt={product.name}
-                            width={300}
-                            height={300}
+                            height={500}
+                            width={500}
+                            className="object-cover w-full h-full"
                         />
                     </div>
                 </motion.div>
