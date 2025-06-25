@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="">
+      <body className={`${instrumentSerif.variable} ${instrumentSans.variable}`}>
 
         <main className="h-screen flex flex-col justify-between items-center">
                   <Navbar />
