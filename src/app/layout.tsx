@@ -6,17 +6,13 @@ import { Instrument_Serif, Instrument_Sans } from "next/font/google";
 
 const instrumentSerif = Instrument_Serif({
   weight: ["400"],
-  preload: false,
   variable: "--font-instrument-serif",
 });
 
 const instrumentSans = Instrument_Sans({
   weight: ["400"],
-  preload: false,
   variable: "--font-instrument-sans",
 });
-
-
 
 export const metadata: Metadata = {
   title: "didischocoberrys",
