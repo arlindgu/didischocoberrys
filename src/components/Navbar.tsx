@@ -34,7 +34,7 @@ export default function Navbar() {
                 <ul className="flex flex-row gap-4 items-center justify-center">
                     {Object.entries(FooterLinks).map(([key, value]: [string, { href: string; label: string; }]) => (
                         <motion.li key={key} whileHover={{ scale: 1.1, rotate: Math.random() * 10 - 5 }}>
-                            <Link href={value.href} className='text-chocolate-50 font-bold uppercase'>{value.label}</Link>
+                            <Link href={value.href} className='text-chocolate-50 font-bold uppercase text-xs md:text-base'>{value.label}</Link>
                         </motion.li>
                     ))}
                 </ul>

@@ -9,7 +9,7 @@ export default function PricingPage() {
         {
             name: 'Erdbeerboxen',
             description: 'Unsere handveredelten Premium-Erdbeeren sind ein echter Blickfang – perfekt für besondere Anlässe wie Geburtstage, Jubiläen oder als edles Geschenk. Frische Erdbeeren werden mit feinster weisser Schokolade überzogen und kunstvoll mit goldenen Zuckerrosen und Ziermustern dekoriert. Die hochwertige Geschenkverpackung mit Sichtfenster rundet das exklusive Erlebnis ab.',
-            picture: '/products/erdbeer_box.jpg',
+            picture: '/products/strawberrybox.svg',
             options: [
                 { size: '15 Stück', price: 'CHF 45.00' },
                 { size: '35 Stück', price: 'CHF 80.00' },
@@ -18,7 +18,7 @@ export default function PricingPage() {
         {
             name: 'I ♥ Boxen',
             description: 'Diese luxuriöse Herzbox ist gefüllt mit frisch getauchten Erdbeeren in zarter Vollmilch- und rosa Schokolade, liebevoll dekoriert mit essbarem Glitzer, feinen Verzierungen und frischen Himbeeren. Die funkelnde Herzverpackung mit Sichtfenster sorgt für den Wow-Effekt – ideal für romantische Anlässe wie Valentinstag, Jahrestage oder einfach als süsse Überraschung.',
-            picture: '/products/iloveu_box.jpg',
+            picture: '/products/ilubox.svg',
             options: [
                 { size: 'Box', price: 'CHF 50.00' },
                 { size: '+ Rosen', price: '+ CHF 10.00' },
@@ -27,7 +27,7 @@ export default function PricingPage() {
         {
             name: 'Berry-Bag',
             description: 'Ein eleganter Rundkorb voller tiefromantischer, frischer roter Rosen, kombiniert mit zartem Schleierkraut und veredelt mit handgemachten Schoko-Dekoren in Herz- und Kugelform. Die Farbtöne in Rot und Rosa schaffen ein luxuriöses Gesamtbild – ideal für besondere Momente wie Valentinstag, Geburtstage oder als liebevolle Überraschung.',
-            picture: '/products/berry_bag.jpg',
+            picture: '/products/berrybag.svg',
             options: [
                 { size: 'Bag', price: 'CHF 70.00' },
             ],
