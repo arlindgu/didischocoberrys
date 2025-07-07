@@ -9,8 +9,8 @@ export default function HeroSection() {
                 <h1 className='text-4xl font-inter font-black text-chocolate-950'>Frisch. Fruchtig. Handgemacht.</h1>
                 <p className='text-sm'>Entdecke unsere mit Liebe veredelten Erdbeeren, umhüllt von feinster Schokolade und verpackt mit Stil. Perfekt zum Geniessen oder Verschenken.</p>
                 <div className='flex flex-row gap-2 mt-4'>
-                <button className=''><Link href="/pricing">Preisliste</Link></button>
-                <button className='bg-background border-chocolate text-chocolate border-2'><Link href="/order">Bestellen</Link></button>
+                <Link href="/pricing"><button className=''>Preisliste</button></Link>
+                <Link href="/order"><button className='bg-background border-chocolate text-chocolate border-2'>Bestellen</button></Link>
                 </div>
             </div>
             <div className='hidden lg:block'>

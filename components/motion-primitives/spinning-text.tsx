@@ -17,10 +17,8 @@ export type SpinningTextProps = {
     item?: Variants;
   };
 };
-
 const BASE_TRANSITION = {
   repeat: Infinity,
-  ease: 'linear',
 };
 
 const BASE_ITEM_VARIANTS = {
