@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 
 export const FloatingParticles = () => {
   // Generiere 6 Partikel mit zufälligen Startpositionen
-  const particles = Array.from({ length: 7 }, (_, i) => ({
+  const particles = Array.from({ length: 7
+   }, (_, i) => ({
     id: i,
     initialX: Math.random() * 100,
     initialY: Math.random() * 100,
@@ -12,7 +13,7 @@ export const FloatingParticles = () => {
   }));
 
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden z-10">
+    <div className="fixed inset-0 pointer-events-none overflow-hidden -z-50">
       {particles.map((particle) => (
         <motion.img
             src="/strawberry.png" // Pfad zum Erdbeerbild

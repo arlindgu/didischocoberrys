@@ -41,7 +41,6 @@ export default function OrderPage() {
     const afterOrderRaw = new Date(roundedOrderDate.getTime() - 4 * 60 * 60 * 1000);
     const roundedAfterOrderDate = roundUpToNextHalfHour(afterOrderRaw);
 
-    // Nach der Bestellung: DDDD, DD MM YYYY HH MM
     const AfterOrderFullString = roundedAfterOrderDate.toLocaleDateString('de-CH', {
         weekday: 'long',
         day: '2-digit',

@@ -16,7 +16,7 @@ export default function PricingPage() {
             ],
         },
         {
-            name: 'I ♥ Boxen',
+            name: 'I 🤎 Boxen',
             description: 'Diese luxuriöse Herzbox ist gefüllt mit frisch getauchten Erdbeeren in zarter Vollmilch- und rosa Schokolade, liebevoll dekoriert mit essbarem Glitzer, feinen Verzierungen und frischen Himbeeren. Die funkelnde Herzverpackung mit Sichtfenster sorgt für den Wow-Effekt – ideal für romantische Anlässe wie Valentinstag, Jahrestage oder einfach als süsse Überraschung.',
             picture: '/products/ilubox.svg',
             options: [
@@ -35,7 +35,7 @@ export default function PricingPage() {
     ];
 
     return (
-        <div className="flex flex-col max-w-5xl gap-8 mt-8">
+        <div className="flex flex-col gap-8 mt-8">
             <motion.div
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -53,13 +53,13 @@ export default function PricingPage() {
                     animate={{ opacity: 1, y: 0 }}
                     initial={{ opacity: 0, y: -50 }}
                     transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.05 + idx * 0.05 }}
-                    className="flex flex-col p-8 md:flex-row gap-8 border-2 rounded-xl mb-4 bg-chocolate-50"
+                    className="flex flex-col p-8 lg:flex-row gap-8 border-2 rounded-4xl mb-4 bg-chocolate-50"
                 >
-                    <div className="w-full md:max-w-3/5">
+                    <div className="w-full lg:w-1/3">
                         <h2>{product.name}</h2>
                         <p className=''>{product.description}</p>
                     </div>
-                    <div className="w-full md:max-w-1/5">
+                    <div className="w-full lg:w-1/3">
                         <h3>Preise</h3>
                         <table className="w-full">
                             <thead className="border-b-2">
@@ -78,13 +78,13 @@ export default function PricingPage() {
                             </tbody>
                         </table>
                     </div>
-                    <div className="flex justify-center items-center aspect-square w-full md:w-2/3">
+                    <div className="flex justify-center items-center self-center aspect-square w-full lg:w-1/3 md:w-2/3">
                         <Image
                             src={product.picture}
                             alt={product.name}
                             height={500}
                             width={500}
-                            className="object-cover w-full h-full"
+                            className="object-cover h-full w-full"
                         />
                     </div>
                 </motion.div>
