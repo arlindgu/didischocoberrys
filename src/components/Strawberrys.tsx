@@ -16,7 +16,7 @@ export const FloatingParticles = () => {
     <div className="fixed inset-0 pointer-events-none overflow-hidden -z-50">
       {particles.map((particle) => (
         <motion.img
-            src="/strawberry.png" // Pfad zum Erdbeerbild
+            src="/strawberry1.png" // Pfad zum Erdbeerbild
           key={particle.id}
           className="absolute"
           style={{
