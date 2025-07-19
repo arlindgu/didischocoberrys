@@ -13,7 +13,7 @@ export default function PictureText({ children, title, imageSrc }: PictureTextPr
 
 
     return (
-        <div className="flex flex-col p-4 ">
+        <div className="flex flex-col p-4">
             <div className="relative w-76 h-76 mb-4 self-center">
             <Image src={imageSrc} alt={title} fill={true} className="mb-4 rounded-xl object-cover" />
             </div>

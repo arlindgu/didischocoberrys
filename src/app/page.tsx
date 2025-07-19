@@ -3,6 +3,7 @@
 import HeroSection from '@/components/HeroSection';
 import PictureText from '@/components/PictureText';
 import { FloatingParticles } from '@/components/Strawberrys';
+import Image from 'next/image';
 
 export default function Home() {
 
@@ -21,12 +22,18 @@ export default function Home() {
           Frische Erdbeeren, die direkt vom Feld kommen und voller Geschmack sind.
         </PictureText>
       </div>
-      <div className='w-full flex flex-col justify-center items-center mt-10 h-screen'>
-        <div className='h-1/2'>
-        <h3>Kaufe jetzt deine!</h3>
-        <p>Versüsse dein Leben mit unseren frischen Erdbeeren!</p>
-        <button>
-          <a href="/order" className="">
+      <div className='w-full flex flex-col justify-center items-center mt-4 h-screen'>
+        <div className='relative flex flex-col justify-center items-center p-4 h-2/3 w-full'>
+        <Image
+          src="/picturetext/bg.png"
+          alt="Erdbeere"
+          fill={true}
+          className="object-cover -z-2 bg-chocolate rounded-xl"
+        />
+        <h3 className='text-white'>Kaufe jetzt deine!</h3>
+        <p className='text-white mb-4'>Versüsse dein Leben mit unseren frischen Erdbeeren!</p>
+        <button className='bg-white'>
+          <a href="/order" className="text-chocolate">
             Jetzt bestellen!
           </a>
         </button>

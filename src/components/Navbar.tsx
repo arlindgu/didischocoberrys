@@ -26,7 +26,7 @@ export default function Navbar() {
 
 
     return (
-        <header className="flex flex-row justify-between items-center gap-2 bg-chocolat p-2 rounded-full">
+        <header className="flex flex-row justify-between items-center gap-2 p-2">
             <nav className='flex flex-col items-center gap-2'>
                 {Object.entries(HeaderLeft).map(([key, value]: [string, { href: string; label: string; }]) => (
                     <Link href={value.href} key={key} className=''>{value.label}</Link>
