@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function HeroSection() {
     return (
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center mt-16">
             <div className='flex flex-col items-start justify-center lg:w-2/3 mb-32'>
                 <h1 className='text-center w-full'>Schoko Erdbeeren</h1>
                 <h2 className='opacity-75 text-center w-full -mt-4'>Frisch. Fruchtig. Handgemacht.</h2>

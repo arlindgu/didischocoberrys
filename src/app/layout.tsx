@@ -3,7 +3,6 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Fredoka } from "next/font/google";
-import ModalMenu from "@/components/ModalMenu";
 
 const fredoka = Fredoka({
   subsets: ["latin"],
@@ -25,8 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={` ${fredoka.variable} subpixel-antialiased`}>
         <main className="h-screen flex flex-col justify-between items-center">
-          <Navbar />
-            <ModalMenu />
+            <Navbar />
           <div className="p-4 flex flex-col mt-8 lg:max-w-5xl md:max-w-xl">
             {children}
           </div>
