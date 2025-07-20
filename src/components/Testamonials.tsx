@@ -23,7 +23,7 @@ export default function Testimonials() {
                 key={index}
                 className="self-center mx-auto"
                 >
-                <p className="text-white bg-white rounded-4xl p-4 text-center">{testimonial}</p>
+                <p className="text-chocolate bg-white rounded-4xl p-4 text-center">{testimonial}</p>
                 </div>
             ))}
             </div>
