@@ -1,7 +1,7 @@
 "use client"
 
 import Link from 'next/link';
-import { SpinningText } from '../../components/motion-primitives/spinning-text';
+import Image from 'next/image';
 
 export default function Navbar() {
 
@@ -13,17 +13,11 @@ export default function Navbar() {
 
 
     return (
-        <header className='flex flex-col mt-16 items-center gap-8'>
-                    <Link href="/" className='flex items-center gap-2 font-semibold'>
-                        <SpinningText
-                            radius={2.5}
-                            fontSize={1}
-                            className='w-10 h-10'
-                        >
-                            {`didis • choco • berrys • `}
-                        </SpinningText>
+        <header className='flex flex-col justify-center items-center mt-8 -space-y-4'>
+                    <Link href="/">
+                    <Image src="/logo.webp" alt="Logo" width={1000} height={1000} className='object-contain w-42 h-42'/>
                     </Link>
-                                <nav className='border flex flex-wrap rounded-full justify-center items-center bg-chocolate'>
+                                <nav className='flex flex-wrap rounded-full justify-center items-center bg-brand-700'>
                 {Object.values(Links).map((link) => (
                     <Link key={link.label} href={link.href} className="text-white hover:font-bold text-lg font-heading font-semibold px-4 py-2">
                         {link.label}

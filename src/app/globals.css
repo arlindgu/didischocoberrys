@@ -1,23 +1,49 @@
 @import "tailwindcss";
 
 :root {
-  --background: oklch(100% 0 none);
-  --foreground: oklch(0% 0 none);
+  --background: #eef0f2;
+  --foreground: #9f8170;
 }
 
 @theme {
-  --color-chocolate: oklch(39.607% 0.06421 39.165);
-  --color-chocolate-50: oklch(100% 0 none);
-  --color-chocolate-100: oklch(97.045% 0.00601 43.335);
-  --color-chocolate-200: oklch(90.432% 0.02157 39.375);
-  --color-chocolate-300: oklch(83.907% 0.03591 39.967);
-  --color-chocolate-400: oklch(77.242% 0.05292 37.89);
-  --color-chocolate-500: oklch(70.637% 0.06968 39.559);
-  --color-chocolate-600: oklch(64.194% 0.08808 39.459);
-  --color-chocolate-700: oklch(57.56% 0.10026 39.14);
-  --color-chocolate-800: oklch(50.708% 0.08624 39.149);
-  --color-chocolate-900: oklch(43.266% 0.07178 39.158);
-  --color-chocolate-950: oklch(39.607% 0.06421 39.165);
+  --color-brand: #9f8170;
+  --color-brand-50: #f5f3f1;
+  --color-brand-100: #e7e0da;
+  --color-brand-200: #d0c3b8;
+  --color-brand-300: #b59e8f;
+  --color-brand-400: #9f8170;
+  --color-brand-500: #907162;
+  --color-brand-600: #7b5d53;
+  --color-brand-700: #644944;
+  --color-brand-800: #563f3d;
+  --color-brand-900: #4b3938;
+  --color-brand-950: #2a1e1e;
+
+  --color-white: #eef0f2;
+  --color-white-50: #f6f8f9;
+  --color-white-100: #eef0f2;
+  --color-white-200: #d7dce0;
+  --color-white-300: #b3bec6;
+  --color-white-400: #8a9aa6;
+  --color-white-500: #6c7e8b;
+  --color-white-600: #566673;
+  --color-white-700: #47535d;
+  --color-white-800: #3d474f;
+  --color-white-900: #363e44;
+  --color-white-950: #24282d;
+
+  --color-accent: #bf1363;
+  --color-accent-50: #fdf2f9;
+  --color-accent-100: #fde6f4;
+  --color-accent-200: #fcceea;
+  --color-accent-300: #fba6d8;
+  --color-accent-400: #f86ebd;
+  --color-accent-500: #f143a2;
+  --color-accent-600: #e0227f;
+  --color-accent-700: #bf1363;
+  --color-accent-800: #a11353;
+  --color-accent-900: #861548;
+  --color-accent-950: #520528;
 }
 
 @theme inline {
@@ -28,59 +54,53 @@
 
 @layer base {
 
-  button {
-    @apply bg-chocolate-950 text-chocolate-100;
-    @apply px-4 py-2 rounded-full font-bold transition-all duration-100;
-    font-family: var(--font-inter);
-  }
+.btn {
+  @apply px-4 py-2 rounded-full font-bold transition-all duration-100;
+  font-family: var(--font-inter);
+}
 
-  input {
-    @apply text-chocolate-950 outline-2 placeholder:text-chocolate-950 placeholder:opacity-75 rounded-full;
-    font-family: var(--font-inter);
-  }
+.btn-primary {
+  @apply bg-accent text-white;
+}
 
-  input:focus {
-    @apply border-chocolate-500 outline-2 transition-all duration-100;
-  }
-
-  input:hover {
-    @apply border-chocolate-400 outline-3 transition-all duration-100;
-  }
+.btn-secondary {
+  @apply border-2 border-accent text-accent;
+}
 
   body {
-    @apply bg-chocolate-100 text-chocolate-950;
+    @apply bg-brand-100
   }
 
   html {
-    @apply overscroll-none
+    @apply overscroll-none;
   }
 
   h1 {
-    @apply text-5xl font-bold mb-5 font-heading;
+    @apply text-5xl font-bold mb-5 font-heading text-brand-700;
   }
 
   h2 {
-    @apply text-4xl font-bold mb-4 font-heading;
+    @apply text-4xl font-bold mb-4 font-heading text-brand-700;
   }
 
   h3 {
-    @apply text-3xl font-bold mb-3 font-heading;
+    @apply text-3xl font-bold mb-3 font-heading text-brand-700;
   }
 
   h4 {
-    @apply text-2xl font-bold mb-2 font-heading;
+    @apply text-2xl font-bold mb-2 font-heading text-brand-700;
   }
 
   h5 {
-    @apply text-xl font-bold mb-1 font-heading;
+    @apply text-xl font-bold mb-1 font-heading text-brand-700;
   }
 
   h6 {
-    @apply text-lg font-bold font-heading;
+    @apply text-lg font-bold font-heading text-brand-700;
   }
 
   p {
-    @apply text-chocolate-900 text-base;
+    @apply text-brand-700 text-base;
     font-family: var(--font-inter);
   }
 }

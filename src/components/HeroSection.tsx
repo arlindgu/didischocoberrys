@@ -12,11 +12,11 @@ export default function HeroSection() {
                 <p className='lg:max-w-1/2'>Entdecke unsere mit Liebe veredelten Erdbeeren, umhüllt von feinster Schokolade und verpackt mit Stil. Perfekt zum Geniessen oder Verschenken.</p>
                 </div>
                 <div className='flex flex-row gap-2 mt-4'>
-                <Link href="/pricing"><button className=''>Preisliste</button></Link>
-                <Link href="/order"><button className='bg-background border-chocolate text-chocolate border-2'>Bestellen</button></Link>
+                <Link href="/pricing"><button className='btn btn-primary'>Preisliste</button></Link>
+                <Link href="/order"><button className='btn btn-secondary'>Bestellen</button></Link>
                 </div>
             </div>
-            <Image src="/heropic.png" alt="Erdbeeren" width={500} height={500} className='object-cover rounded-xl hidden lg:block' />
+            <Image src="/1.jpg" alt="Erdbeeren" width={1000} height={1000} className='aspect-[16/9] object-cover rounded-xl hidden lg:block' />
         </div>
     );
 }

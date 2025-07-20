@@ -1,3 +1,5 @@
+import { motion } from "framer-motion"
+
 export default function Testimonials() {
 
     const testimonials = [
@@ -19,12 +21,15 @@ export default function Testimonials() {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
             >
             {testimonials.map((testimonial, index) => (
-                <div
+                <motion.div
+                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, scale: 0 }}
+                transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.25 * index, type: 'spring', stiffness: 100 }}
                 key={index}
                 className="self-center mx-auto"
                 >
-                <p className="text-chocolate bg-white rounded-4xl p-4 text-center">{testimonial}</p>
-                </div>
+                <p className="text-brand-700 bg-white rounded-4xl p-4 text-center">{testimonial}</p>
+                </motion.div>
             ))}
             </div>
         </div>

@@ -44,7 +44,7 @@ export default function PricingPage() {
                     animate={{ opacity: 1, scale: 1 }}
                     initial={{ opacity: 0, scale: 0 }}
                     transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.05 + idx * 0.25, type: 'spring', stiffness: 100 }}
-                    className="flex flex-col p-8 lg:flex-row gap-8 border-2 rounded-4xl mb-4 bg-chocolate-50"
+                    className="flex flex-col p-8 lg:flex-row gap-8 bg-white rounded-4xl mb-4"
                 >
                     <div className="w-full lg:w-1/3">
                         <h2>{product.name}</h2>

@@ -20,24 +20,24 @@ export default function Home() {
             gefertigt, um Momente purer Freude zu schaffen.
           </p>
         </div>
-        <div className="flex-col lg:flex-row flex gap-16">
+        <div className="flex-col lg:flex-row flex gap-8">
           <PictureText
             title="Mit Liebe gemacht"
-            icon={<Heart className="w-8 h-8 stroke-1" />}
+            icon={<Heart className="w-8 h-8 stroke-2" />}
           >
             Jede Schokolade wird mit Leidenschaft und Liebe zum Detail
             handgefertigt, was man auch schmeckt.
           </PictureText>
           <PictureText
             title="Hochwertige Zutaten"
-            icon={<Droplets className="w-8 h-8 stroke-1" />}
+            icon={<Droplets className="w-8 h-8 stroke-2" />}
           >
             Wir verwenden nur die feinste Schokolade und die frischesten
             Erdbeeren für aussergewöhnliche Qualität.
           </PictureText>
           <PictureText
             title="Liebevolle Dekorationen"
-            icon={<Sparkles className="w-8 h-8 stroke-1" />}
+            icon={<Sparkles className="w-8 h-8 stroke-2" />}
           >
             Unsere Erdbeeren sind nicht nur lecker, sondern auch wunderschön
             dekoriert, perfekt für jeden Anlass.
@@ -53,14 +53,14 @@ export default function Home() {
             src="/picturetext/bg.png"
             alt="Erdbeere"
             fill={true}
-            className="object-cover -z-2 bg-chocolate rounded-xl"
+            className="object-cover -z-2 bg-brand rounded-xl"
           />
           <h3 className="text-white">Kaufe jetzt deine!</h3>
-          <p className="text-white mb-4">
+          <p className="text-white mb-4 text-center">
             Versüsse dein Leben mit unseren frischen Erdbeeren!
           </p>
-          <button className="bg-white">
-            <a href="/order" className="text-chocolate">
+          <button className="btn btn-primary">
+            <a href="/order" className="text-white">
               Jetzt bestellen!
             </a>
           </button>
