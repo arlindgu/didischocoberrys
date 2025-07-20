@@ -13,7 +13,7 @@ export default function Navbar() {
 
 
     return (
-        <header className='flex flex-col md:flex-row mt-16 items-center gap-8'>
+        <header className='flex flex-col mt-16 items-center gap-8'>
                     <Link href="/" className='flex items-center gap-2 font-semibold'>
                         <SpinningText
                             radius={2.5}

@@ -36,23 +36,14 @@ export default function PricingPage() {
 
     return (
         <div className="flex flex-col gap-8 mt-8">
-            <motion.div
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, ease: 'easeInOut' }}
-                className="flex flex-col items-center justify-center"
-            >
-                <h1>Produkte und Preise</h1>
-                <p className='text-center'>Hier findest du die Preise für unsere liebevoll verpackten Erdbeer-Geschenke</p>
-            </motion.div>
             <div>
 
             {Products.map((product, idx) => (
                 <motion.div
                     key={product.name}
-                    animate={{ opacity: 1, y: 0 }}
-                    initial={{ opacity: 0, y: -50 }}
-                    transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.05 + idx * 0.05 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0, scale: 0 }}
+                    transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.05 + idx * 0.25, type: 'spring', stiffness: 100 }}
                     className="flex flex-col p-8 lg:flex-row gap-8 border-2 rounded-4xl mb-4 bg-chocolate-50"
                 >
                     <div className="w-full lg:w-1/3">

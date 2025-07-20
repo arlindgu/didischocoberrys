@@ -23,14 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` ${fredoka.variable} subpixel-antialiased`}>
-        <main className="h-screen flex flex-col justify-between items-center">
             <Navbar />
-          <div className="p-4 flex flex-col mt-8 lg:max-w-5xl md:max-w-xl">
+          <div className="max-w-7xl p-4 mx-auto">
             {children}
           </div>
           <Footer />
-        </main>
-
       </body>
     </html>
   );

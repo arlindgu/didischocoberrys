@@ -54,14 +54,18 @@ export default function OrderPage() {
     return (
         <div className='flex flex-col bg-chocolate-100 items-center justify-center gap-4'>
             <div className='flex flex-col justify-center items-center'>
-                <h1>Bestellung aufgeben</h1>
                 <p className='text-center'>Schreib uns deine Bestellung einfach per Instagram an<a href='https://ig.me/m/didischocoberrys' className="font-semibold"> @didischocoberrys</a></p>
             </div>
-            <div className="flex flex-col gap-4 bg-chocolate-200 rounded-3xl p-4 max-w-md">
+            <motion.div
+            animate={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0, scale: 0 }}
+                    transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.15, type: 'spring', stiffness: 100 }}
+
+             className="flex flex-col gap-4 bg-chocolate-200 rounded-3xl p-4 max-w-md">
                 <motion.p
                     animate={{ opacity: 1, scale: 1 }}
                     initial={{ opacity: 0, scale: 0 }}
-                    transition={{ duration: 0.5, ease: 'easeInOut', delay: 1 }}
+                    transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.25, type: 'spring', stiffness: 100 }}
                     className='p-4 rounded-2xl bg-chocolate-50 ml-auto w-9/10'>
                     Hallo
 
@@ -76,32 +80,32 @@ export default function OrderPage() {
                 <motion.p
                     animate={{ opacity: 1, scale: 1 }}
                     initial={{ opacity: 0, scale: 0 }}
-                    transition={{ duration: 0.5, ease: 'easeInOut', delay: 2 }}
+                    transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5, type: 'spring', stiffness: 100 }}
                     className='p-4 rounded-2xl bg-chocolate-800 text-chocolate-50 w-9/10 mr-auto'>
                     Vielen Dank für deine Bestellung! Ich sag dir dann rechtzeitig Bescheid, sobald sie fertig ist. Danke dir! ☺️
                 </motion.p>
                 <motion.p
                     animate={{ opacity: 1, scale: 1 }}
                     initial={{ opacity: 0, scale: 0 }}
-                    transition={{ duration: 0.5, ease: 'easeInOut', delay: 3 }}
+                    transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.75, type: 'spring', stiffness: 100 }}
                     className='w-full text-center'>
                     {AfterOrderFullString}
                 </motion.p>
                 <motion.p
                     animate={{ opacity: 1, scale: 1 }}
                     initial={{ opacity: 0, scale: 0 }}
-                    transition={{ duration: 0.5, ease: 'easeInOut', delay: 4 }}
+                    transition={{ duration: 0.5, ease: 'easeInOut', delay: 1, type: 'spring', stiffness: 100 }}
                     className='p-4 rounded-2xl bg-chocolate-800 text-chocolate-50 w-9/10 mr-auto'>
                     Deine Bestellung ist bereit! Du darfst sie abholen kommen. ☺️ ❤️
                 </motion.p>
                 <motion.p
                     animate={{ opacity: 1, scale: 1 }}
                     initial={{ opacity: 0, scale: 0 }}
-                    transition={{ duration: 0.5, ease: 'easeInOut', delay: 5 }}
+                    transition={{ duration: 0.5, ease: 'easeInOut', delay: 1.25, type: 'spring', stiffness: 100 }}
                     className='p-4 rounded-2xl bg-chocolate-50 w-9/10 ml-auto'>
                     Danke, bin unterwegs! 🚗💨
                 </motion.p>
-            </div>
+            </motion.div>
         </div>
     );
 }

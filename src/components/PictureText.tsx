@@ -1,28 +1,17 @@
-import { ReactNode } from 'react';
-import Image from 'next/image';
+import { ReactNode, ReactElement } from 'react';
 
 type PictureTextProps = {
-  title: string;
-  imageSrc: string;
-  children?: ReactNode;
+    title: string;
+    icon: ReactElement;
+    children?: ReactNode;
 };
 
-
-export default function PictureText({ children, title, imageSrc }: PictureTextProps) {
-
-
-
+export default function PictureText({ children, title, icon }: PictureTextProps) {
     return (
-        <div className="flex flex-col p-4">
-            <div className="relative w-76 h-76 mb-4 self-center">
-            <Image src={imageSrc} alt={title} fill={true} className="mb-4 rounded-xl object-cover" />
-            </div>
-            <div className='w-76'>
-            <h3>{title}</h3>
-            <p>
-                {children}
-            </p>
-            </div>
+        <div className="flex flex-col p-8 bg-white rounded-xl">
+            <div className="mb-2 self-center bg-chocolate p-2 rounded-full text-white">{icon}</div>
+            <h4 className='text-center font-medium'>{title}</h4>
+            <p className='text-center'>{children}</p>
         </div>
     );
-    }
+}
