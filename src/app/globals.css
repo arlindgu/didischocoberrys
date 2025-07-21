@@ -64,7 +64,7 @@
 }
 
 .btn-secondary {
-  @apply border-2 border-accent text-accent;
+  @apply border-2 border-accent text-accent bg-brand-50;
 }
 
   body {

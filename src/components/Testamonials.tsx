@@ -14,24 +14,32 @@ export default function Testimonials() {
         "Vielen dank nochmal 🙌🏻 hat super geschmeckt 👌🏻"
     ];
 
+    // Duplicate testimonials for seamless loop
+    const duplicatedTestimonials = [...testimonials, ...testimonials];
+
     return (
-        <div className="flex flex-col items-center justify-center mt-16 w-full">
-            <h2 className="text-2xl font-bold mb-8">Was unsere Kunden sagen</h2>
-            <div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        <div className="flex items-center overflow-hidden mt-16">
+            <motion.div
+                className="flex gap-4 items-center"
+                animate={{ 
+                    x: [0, -((300 + 16) * testimonials.length)] // 300px card width + 16px gap
+                }}
+                transition={{
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: testimonials.length * 3, // Adjust speed here
+                    ease: "linear"
+                }}
             >
-            {testimonials.map((testimonial, index) => (
-                <motion.div
-                animate={{ opacity: 1, scale: 1 }}
-                initial={{ opacity: 0, scale: 0 }}
-                transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.25 * index, type: 'spring', stiffness: 100 }}
-                key={index}
-                className="self-center mx-auto"
-                >
-                <p className="text-brand-700 bg-white rounded-4xl p-4 text-center">{testimonial}</p>
-                </motion.div>
-            ))}
-            </div>
+                {duplicatedTestimonials.map((testimonial, index) => (
+                    <div
+                        key={index}
+                        className="text-brand-700 bg-brand-50 rounded-4xl p-4 text-center min-w-[300px] max-w-[300px]"
+                    >
+                        {testimonial}
+                    </div>
+                ))}
+            </motion.div>
         </div>
     );
 }

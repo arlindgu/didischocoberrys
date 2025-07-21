@@ -24,9 +24,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={` ${fredoka.variable} subpixel-antialiased`}>
             <Navbar />
-          <div className="max-w-7xl p-4 mx-auto">
+            <div className="max-w-7xl mx-auto px-4">
             {children}
-          </div>
+            </div>
           <Footer />
       </body>
     </html>

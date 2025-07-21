@@ -53,7 +53,7 @@ export default function OrderPage() {
     });
 
     return (
-        <div className='flex flex-col items-center justify-center gap-4'>
+        <div className='flex flex-col items-center justify-center gap-4 mt-16'>
             <div className='flex flex-col justify-center items-center gap-2'>
                 <p className='text-center'>Schreib uns deine Bestellung einfach per Instagram an<a href='https://ig.me/m/didischocoberrys' className="font-semibold"> @didischocoberrys</a></p>
                 <button className='btn btn-primary flex-row flex gap-2'>
