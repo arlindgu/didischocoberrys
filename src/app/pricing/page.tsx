@@ -35,7 +35,7 @@ export default function PricingPage() {
     ];
 
     return (
-        <div className="flex flex-col gap-8 mt-16">
+        <div className="flex flex-col gap-8 mt-16 max-w-7xl px-4 mx-auto">
             <div>
 
             {Products.map((product, idx) => (

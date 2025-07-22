@@ -5,9 +5,9 @@ import {motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <section className="flex flex-col justify-center items-center mt-16 gap-4">
+    <section className="mx-auto flex flex-col justify-center items-center mt-16 gap-4 max-w-7xl px-4">
       <div className="flex flex-col items-center text-center">
-        <h1 className="text-7xl">Schoko Erdbeeren</h1>
+        <h1 className="text-5xl lg:text-6xl">Schoko Erdbeeren</h1>
         <h2 className="opacity-75 w-full -mt-4">
           Frisch. Fruchtig. Handgemacht.
         </h2>
@@ -16,7 +16,7 @@ export default function HeroSection() {
           Schokolade und verpackt mit Stil.
         </p>
       </div>
-        <div className="flex flex-row space-x-2">
+        <div className="flex flex-row space-x-2 hidden">
             <motion.div
           animate={{ opacity: 1, scale: 1 }}
                     initial={{ opacity: 0, scale: 0 }}

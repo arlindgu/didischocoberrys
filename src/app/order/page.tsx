@@ -69,7 +69,7 @@ export default function OrderPage() {
                     initial={{ opacity: 0, scale: 0 }}
                     transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.15, type: 'spring', stiffness: 100 }}
 
-             className="flex flex-col gap-4 bg-brand-200 rounded-3xl p-4 max-w-md">
+             className="flex flex-col gap-4 bg-brand-200 rounded-3xl max-w-md p-4 mx-4">
                 <motion.p
                     animate={{ opacity: 1, scale: 1 }}
                     initial={{ opacity: 0, scale: 0 }}
